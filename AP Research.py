@@ -2,7 +2,7 @@ import sacrebleu
 from jiwer import wer
 from pathlib import Path
 
-# Resolve paths relative to this script's folder (more reliable than PyCharm's working directory).
+# Resolve paths relative to this script's folder
 BASE_DIR = Path(__file__).resolve().parent
 HUMAN_PATH = BASE_DIR / "human_translation.txt"
 LLM_PATH = BASE_DIR / "llm_translation.txt"
