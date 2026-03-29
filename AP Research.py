@@ -15,10 +15,9 @@ llm_text = LLM_PATH.read_text(encoding="utf-8").strip()
 human_translation = [human_text]
 llm_translation = [llm_text]
 
-# Calculates BLEU (from SacreBLEU) =====
+# Calculates BLEU (from SacreBLEU)
 bleu = sacrebleu.corpus_bleu(llm_translation, [human_translation])
 print(f"BLEU: {bleu.score:.2f}")
 
-# Calculates WER (Word Error Rate, from JiWER) =====
-wer_score = wer(human_text, llm_text)
+# Calculates WER (Word Error Rate, from JiWER)
 print(f"WER: {wer_score * 100:.2f}%")
